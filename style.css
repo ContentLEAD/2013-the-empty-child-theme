@@ -1,0 +1,335 @@
+/*
+ Theme Name:     Twenty Thirteen Child
+ Theme URI:      http://example.com/twenty-thirteen-child/
+ Template:       twentythirteen
+ Version:        1.0.0
+*/
+
+
+
+/* =Imports styles from the parent theme
+-------------------------------------------------------------- */
+
+@import url('../twentythirteen/style.css');
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+
+
+
+/**
+ * 1.0 Reset
+ *
+ * Modified from Normalize.css to provide cross-browser consistency and a smart
+ * default styling of HTML elements.
+ *
+ * @see http://git.io/normalize
+ * ----------------------------------------------------------------------------
+ */
+
+
+/*--Reset Fonts-----------------------------------------------------------------*/
+
+body, h1, h2, h3, h4, h5, h6, .page-title {
+font-family: 'Open Sans', sans-serif;
+}
+
+
+/*--Reset Color-----------------------------------------------------------------*/
+
+/*--Reset Color Links---*/
+
+a, .widget a, .site-footer .widget a, .entry-meta a, .entry-title a, .navigation a, .post-navigation, .entry-content a, .comment-content a {
+	color: #ca3c08;
+}
+
+a:visited, .widget a:visited, .site-footer .widget a:visited, .entry-meta a:visited, .entry-title a:visited, .navigation a:visited{
+	color: #ac0404;
+}
+
+a:active, a:hover,
+.widget a:active, .site-footer .widget a:active, .entry-meta a:active, .entry-title a:active, .navigation a:active
+.widget a:hover, .site-footer .widget a:hover, .entry-meta a:hover, .entry-title a:hover, .navigation a:hover  {
+	color: #ea9629; text-decoration: none;
+}
+
+a:hover h1, a:hover h2, a:hover h3, a:hover h4, a:hover h5, a:hover h6 {
+	color: #ACF;
+}
+
+/*--Reset Color backgrounds and things--*/
+
+.widget {
+	background-color: #eee;
+}
+
+.page-header, .archive-header, .paging-navigation { background-color: transparent; }
+
+.paging-navigation .meta-nav { color: #fff; }
+
+.paging-navigation .meta-nav:hover { background: #ea9629; }
+
+.paging-navigation a:hover .meta-nav { background-color: #ea9629; }
+
+.site-footer { background-color: #fff; color: #555; }
+
+/*--Reset Color Forms --*/
+
+button, input, textarea {
+	border: 2px solid #d4d0ba;
+}
+
+input:focus,
+textarea:focus {
+	border: 2px solid #ACF;
+}
+
+button, input[type="submit"], input[type="button"], input[type="reset"]{
+	background: #8ac020; border:none; border-radius: 2px; color: #fff; text-decoration: none;
+}
+
+button:hover, button:focus, input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:focus, input[type="button"]:focus, input[type="reset"]:focus {
+	background: #ea9629;
+}
+
+button:active, input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:active {
+	background: #d94412; /* Old browsers */
+	border: none;
+}
+
+
+/*--Reset Color Nav --*/
+
+.nav-menu li a {
+	color: #141412;
+}
+
+.nav-menu li:hover > a,
+.nav-menu li a:hover {
+	background-color: #220e10;
+	color: #fff;
+}
+
+.nav-menu .sub-menu,
+.nav-menu .children {
+	background-color: #220e10;
+	border: 2px solid #f7f5e7;
+}
+
+ul.nav-menu ul a,
+.nav-menu ul ul a {
+	color: #fff;
+}
+
+ul.nav-menu ul a:hover,
+.nav-menu ul ul a:hover {
+	background-color: #db572f;
+}
+
+.nav-menu .current_page_item > a,
+.nav-menu .current_page_ancestor > a,
+.nav-menu .current-menu-item > a,
+.nav-menu .current-menu-ancestor > a {
+	color: #66B854; font-style: inherit;
+}
+
+/* Navbar */
+.navbar {
+	background-color: #fff;
+}
+
+
+
+/*--Reset TRANSITION EVERYTHING --------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6, a, .paging-navigation .meta-nav {	text-decoration: none;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+button, input {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+/**
+ * 2.0 Repeatable Patterns
+ * ----------------------------------------------------------------------------
+ */
+.sidebar .entry-header, .sidebar .entry-content, .sidebar .entry-summary, .sidebar .entry-meta {
+	max-width: inherit;
+	padding: inherit;
+}
+
+#content ul li, .widget ul li {
+	margin: 0 0 6px 15px; padding: 0; list-style-image: url('images/arrow.png');
+}
+
+
+/**
+ * 3.0 Basic Structure
+ * ----------------------------------------------------------------------------
+ */
+
+.site {
+	border:none;
+	margin: 0 auto;
+	max-width: 1025px;
+	width: 100%;
+}
+
+.site-main {
+	margin: 0 auto 25px auto;
+	max-width: 1025px;
+	width: 100%;
+}
+
+.site-main .sidebar-container {
+	height: inherit;
+	position: inherit;
+	top: inherit;
+	width: inherit;
+	z-index: inherit;
+	float:right;
+	width:30%;
+}
+
+#primary {
+	width: 70%;
+	float: left;
+	padding: 0 20px 0 0;
+}
+
+
+/**
+ * 4.0 Header
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 4.1 Site Header
+ * ----------------------------------------------------------------------------
+ */
+
+.site-header .widget {
+	background-color: transparent;
+	float: right;
+	width: 50%;
+	text-align: right;
+}
+
+.site-header .home-link {
+	min-height:inherit;
+	margin:15px 0;
+	float: left;
+	width: 50%;
+}
+
+/**
+ * 4.2 Navigation
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 5.0 Content
+ * ----------------------------------------------------------------------------
+ */
+.entry-thumbnail.home { float:right; width:30%; margin: 0 0 10px 20px; }
+.entry-thumbnail { float:right; width:50%; max-width:310px; margin: 0 0 10px 20px; }
+
+.paging-navigation .nav-previous .meta-nav {padding: 0 0 2px 0; width: 42px;}
+.sidebar .paging-navigation .nav-links, .sidebar .post-navigation .nav-links  {max-width: inherit; padding: 0;}
+
+
+/**
+ * 5.3 Entry Content
+ * ----------------------------------------------------------------------------
+ */
+
+.hentry {padding: 10px 0;}
+
+.entry-header { margin-bottom: 10px; }
+
+.blog .entry-thumbnail, .archive .entry-thumbnail { float:right; width:30%; margin: 0 0 0 4%; }
+.entry-thumbnail { float:right; width:50%; max-width:310px; margin: 0 0 10px 20px; }
+
+.blog .entry-header, .archive .entry-header, .blog .entry-summary, .archive .entry-summary, .blog .entry-content, .archive .entry-content {float:left; width:66%;}
+
+.blog article:first-of-type .entry-header, .archive article:first-of-type .entry-header, .blog article:first-of-type .entry-summary, .archive article:first-of-type .entry-summary, .blog article:first-of-type .entry-content, .archive article:first-of-type .entry-content { width:51%;}
+.blog article:first-of-type h3, .archive article:first-of-type h3 {font-size: 26px;}
+
+.blog article:first-of-type .entry-summary, .archive article:first-of-type .entry-summary, .blog article:first-of-type .entry-content, .archive article:first-of-type .entry-content {font-size: 20px;}
+
+.blog article:first-of-type .entry-thumbnail, .archive article:first-of-type .entry-thumbnail {width: 51%;}
+
+.blog .news-category article:first-of-type .entry-content, .archive .news-category article:first-of-type .entry-content, .blog .news-category .entry-header, .archive .news-category .entry-header, .blog .news-category .entry-summary, .archive .news-category .entry-summary, .blog .news-category .entry-content, .archive  .news-category .entry-content {width: 100%!important;;font-size: inherit;}
+
+
+.news-category {float:left; margin:0 1.25% 0 0; width:24%;}
+.news-category:nth-child(4) {margin:0;}
+
+.homepost {width:31%; margin: 0 3.4% 20px 0; float:left;padding:10px;}
+.homepost:last-child {margin:0;}
+.homepost:hover {background: #eee;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;}
+
+.homepost:hover, .homepost:hover h5, .homepost:hover a {color:green;}
+.homepostimg {	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;}
+
+/**
+ * 6.0 Sidebar
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 6.1 Widgets
+ * ----------------------------------------------------------------------------
+ */
+
+
+/**
+ * 6.2 Widget areas
+ * ----------------------------------------------------------------------------
+ */
+
+
+/**
+ * 7.0 Footer
+ * ----------------------------------------------------------------------------
+ */
+ .sidebar .site-footer .widget-area {
+ 	position: inherit!important;
+ 	height: inherit!important;
+ 	margin: 0 auto;
+max-width: 1025px;
+width: 100%;
+ }
+
+.sidebar .site-footer .widget {
+	width: 25%;
+	margin: 0 0 25px 0;
+	position: inherit!important;
+	left: inherit!important;
+	top: inherit!important;
+}
+
+.sidebar .site-footer .widget:last-child {
+	margin: 0;
+}
+
+.sidebar .site-footer .widget:nth-of-type(4), .sidebar .site-footer .widget:nth-of-type(3) {margin-right: inherit;}
+
+/**
+ * 8.0 Media Queries
+ * ----------------------------------------------------------------------------
+ */
